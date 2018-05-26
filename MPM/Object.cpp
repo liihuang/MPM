@@ -51,10 +51,11 @@ void Object::updateF() {
 void Object::collision() {
 	for (int i = 0, length = MaterialPoints->size(); i < length; ++i) {
 		Vector2f newPos = (*MaterialPoints)[i].position + (*MaterialPoints)[i].velocity * TimeStep;
-		if (newPos[0] < 0.05 || newPos[0] > 1.0 - 0.05) {
+		const float &interval = 0.008;
+		if (newPos[0] < BSPLINE_RADIUS * interval || newPos[0] > 1.0 - BSPLINE_RADIUS * interval) {
 			(*MaterialPoints)[i].velocity[0] = -Sticky * (*MaterialPoints)[i].velocity[0];
 		}
-		if (newPos[1] < 0.05 || newPos[1] > 1.0 - 0.05) {
+		if (newPos[1] < BSPLINE_RADIUS * interval || newPos[1] > 1.0 - BSPLINE_RADIUS * interval) {
 			(*MaterialPoints)[i].velocity[1] = -Sticky * (*MaterialPoints)[i].velocity[1];
 		}
 	}

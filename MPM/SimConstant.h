@@ -23,6 +23,7 @@ const float YOUNGS_MODULUS = 1.5e5,		//Young's modulus (springiness) (1.4e5)
 			POISSONS_RATIO = 0.2;
 const float Hardening = 5;
 const float FLIP_PERCENT = 0.95;
+const float BSPLINE_RADIUS = 2;
 
 
 const Vector2f Gravity = Vector2f(0, -9.8);

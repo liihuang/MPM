@@ -140,12 +140,12 @@ void Grid::collision() {
 	for (int i = 0, length = EulerGrid.size(); i < length; ++i) {
 		if (EulerGrid[i].active) {
 			Vector2f newPos = EulerGrid[i].position + EulerGrid[i].velocity_new * TimeStep;
-			if (newPos[0] < 0.05 || newPos[0] > size[0] - 0.05) {
+			if (newPos[0] < BSPLINE_RADIUS * interval || newPos[0] > size[0] - BSPLINE_RADIUS * interval) {
 				//EulerGrid[i].velocity[0] = -Sticky * EulerGrid[i].velocity[0];
 				EulerGrid[i].velocity_new[0] = 0;
 				EulerGrid[i].velocity_new[1] *= Sticky;
 			}
-			if (newPos[1] < 0.05 || newPos[1] > size[1] - 0.05) {
+			if (newPos[1] < BSPLINE_RADIUS * interval || newPos[1] > size[1] - BSPLINE_RADIUS * interval) {
 				EulerGrid[i].velocity_new[0] *= Sticky;
 				//EulerGrid[i].velocity[1] = -Sticky * EulerGrid[i].velocity[1];
 				EulerGrid[i].velocity_new[1] = 0;

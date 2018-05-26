@@ -1,0 +1,136 @@
+﻿  glad.c
+  Grid.cpp
+d:\hl\cg\simulation\mpm\mpm\SimConstant.h(15): warning C4305: “初始化”: 从“double”到“float”截断
+d:\hl\cg\simulation\mpm\mpm\SimConstant.h(17): warning C4244: “初始化”: 从“double”转换到“int”，可能丢失数据
+d:\hl\cg\simulation\mpm\mpm\SimConstant.h(18): warning C4305: “初始化”: 从“double”到“float”截断
+d:\hl\cg\simulation\mpm\mpm\SimConstant.h(20): warning C4305: “初始化”: 从“double”到“float”截断
+d:\hl\cg\simulation\mpm\mpm\SimConstant.h(23): warning C4305: “初始化”: 从“double”到“float”截断
+d:\hl\cg\simulation\mpm\mpm\SimConstant.h(25): warning C4305: “初始化”: 从“double”到“float”截断
+d:\hl\cg\simulation\mpm\mpm\SimConstant.h(28): warning C4305: “参数”: 从“double”到“const float”截断
+d:\hl\cg\simulation\mpm\mpm\SimConstant.h(31): warning C4305: “初始化”: 从“double”到“float”截断
+d:\hl\cg\simulation\mpm\mpm\SimConstant.h(32): warning C4305: “初始化”: 从“double”到“float”截断
+d:\hl\cg\simulation\mpm\mpm\Util.h(9): warning C4305: “初始化”: 从“double”到“float”截断
+d:\hl\cg\simulation\mpm\mpm\Util.h(14): warning C4244: “=”: 从“double”转换到“float”，可能丢失数据
+d:\hl\cg\simulation\mpm\mpm\Util.h(17): warning C4244: “=”: 从“double”转换到“float”，可能丢失数据
+d:\hl\cg\simulation\mpm\mpm\Util.h(27): warning C4244: “=”: 从“double”转换到“float”，可能丢失数据
+Grid.cpp(4): warning C4244: “=”: 从“float”转换到“int”，可能丢失数据
+Grid.cpp(5): warning C4244: “=”: 从“float”转换到“int”，可能丢失数据
+Grid.cpp(20): warning C4244: “初始化”: 从“float”转换到“int”，可能丢失数据
+Grid.cpp(66): warning C4244: “初始化”: 从“float”转换到“int”，可能丢失数据
+Grid.cpp(114): warning C4244: “初始化”: 从“float”转换到“int”，可能丢失数据
+  LargrangianParticle.cpp
+d:\hl\cg\simulation\mpm\mpm\SimConstant.h(15): warning C4305: “初始化”: 从“double”到“float”截断
+d:\hl\cg\simulation\mpm\mpm\SimConstant.h(17): warning C4244: “初始化”: 从“double”转换到“int”，可能丢失数据
+d:\hl\cg\simulation\mpm\mpm\SimConstant.h(18): warning C4305: “初始化”: 从“double”到“float”截断
+d:\hl\cg\simulation\mpm\mpm\SimConstant.h(20): warning C4305: “初始化”: 从“double”到“float”截断
+d:\hl\cg\simulation\mpm\mpm\SimConstant.h(23): warning C4305: “初始化”: 从“double”到“float”截断
+d:\hl\cg\simulation\mpm\mpm\SimConstant.h(25): warning C4305: “初始化”: 从“double”到“float”截断
+d:\hl\cg\simulation\mpm\mpm\SimConstant.h(28): warning C4305: “参数”: 从“double”到“const float”截断
+d:\hl\cg\simulation\mpm\mpm\SimConstant.h(31): warning C4305: “初始化”: 从“double”到“float”截断
+d:\hl\cg\simulation\mpm\mpm\SimConstant.h(32): warning C4305: “初始化”: 从“double”到“float”截断
+d:\hl\cg\simulation\mpm\mpm\Util.h(9): warning C4305: “初始化”: 从“double”到“float”截断
+d:\hl\cg\simulation\mpm\mpm\Util.h(14): warning C4244: “=”: 从“double”转换到“float”，可能丢失数据
+d:\hl\cg\simulation\mpm\mpm\Util.h(17): warning C4244: “=”: 从“double”转换到“float”，可能丢失数据
+d:\hl\cg\simulation\mpm\mpm\Util.h(27): warning C4244: “=”: 从“double”转换到“float”，可能丢失数据
+LargrangianParticle.cpp(36): warning C4244: “=”: 从“double”转换到“float”，可能丢失数据
+LargrangianParticle.cpp(37): warning C4244: “=”: 从“double”转换到“float”，可能丢失数据
+  main.cpp
+d:\hl\cg\simulation\mpm\mpm\SimConstant.h(15): warning C4305: “初始化”: 从“double”到“float”截断
+d:\hl\cg\simulation\mpm\mpm\SimConstant.h(17): warning C4244: “初始化”: 从“double”转换到“int”，可能丢失数据
+d:\hl\cg\simulation\mpm\mpm\SimConstant.h(18): warning C4305: “初始化”: 从“double”到“float”截断
+d:\hl\cg\simulation\mpm\mpm\SimConstant.h(20): warning C4305: “初始化”: 从“double”到“float”截断
+d:\hl\cg\simulation\mpm\mpm\SimConstant.h(23): warning C4305: “初始化”: 从“double”到“float”截断
+d:\hl\cg\simulation\mpm\mpm\SimConstant.h(25): warning C4305: “初始化”: 从“double”到“float”截断
+d:\hl\cg\simulation\mpm\mpm\SimConstant.h(28): warning C4305: “参数”: 从“double”到“const float”截断
+d:\hl\cg\simulation\mpm\mpm\SimConstant.h(31): warning C4305: “初始化”: 从“double”到“float”截断
+d:\hl\cg\simulation\mpm\mpm\SimConstant.h(32): warning C4305: “初始化”: 从“double”到“float”截断
+d:\hl\cg\simulation\mpm\mpm\Util.h(9): warning C4305: “初始化”: 从“double”到“float”截断
+d:\hl\cg\simulation\mpm\mpm\Util.h(14): warning C4244: “=”: 从“double”转换到“float”，可能丢失数据
+d:\hl\cg\simulation\mpm\mpm\Util.h(17): warning C4244: “=”: 从“double”转换到“float”，可能丢失数据
+d:\hl\cg\simulation\mpm\mpm\Util.h(27): warning C4244: “=”: 从“double”转换到“float”，可能丢失数据
+d:\hl\cg\simulation\mpm\mpm\MPM_Simulator.h(11): warning C4305: “参数”: 从“double”到“float”截断
+d:\hl\cg\simulation\mpm\mpm\main.h(60): warning C4244: “初始化”: 从“float”转换到“int”，可能丢失数据
+main.cpp(16): warning C4305: “参数”: 从“double”到“const float”截断
+main.cpp(16): warning C4305: “参数”: 从“double”到“float”截断
+main.cpp(17): warning C4305: “参数”: 从“double”到“const float”截断
+main.cpp(17): warning C4305: “参数”: 从“double”到“float”截断
+  Matrix2f.cpp
+Matrix2f.cpp(96): warning C4244: “参数”: 从“int”转换到“const float”，可能丢失数据
+  MPM_Simulator.cpp
+d:\hl\cg\simulation\mpm\mpm\SimConstant.h(15): warning C4305: “初始化”: 从“double”到“float”截断
+d:\hl\cg\simulation\mpm\mpm\SimConstant.h(17): warning C4244: “初始化”: 从“double”转换到“int”，可能丢失数据
+d:\hl\cg\simulation\mpm\mpm\SimConstant.h(18): warning C4305: “初始化”: 从“double”到“float”截断
+d:\hl\cg\simulation\mpm\mpm\SimConstant.h(20): warning C4305: “初始化”: 从“double”到“float”截断
+d:\hl\cg\simulation\mpm\mpm\SimConstant.h(23): warning C4305: “初始化”: 从“double”到“float”截断
+d:\hl\cg\simulation\mpm\mpm\SimConstant.h(25): warning C4305: “初始化”: 从“double”到“float”截断
+d:\hl\cg\simulation\mpm\mpm\SimConstant.h(28): warning C4305: “参数”: 从“double”到“const float”截断
+d:\hl\cg\simulation\mpm\mpm\SimConstant.h(31): warning C4305: “初始化”: 从“double”到“float”截断
+d:\hl\cg\simulation\mpm\mpm\SimConstant.h(32): warning C4305: “初始化”: 从“double”到“float”截断
+d:\hl\cg\simulation\mpm\mpm\Util.h(9): warning C4305: “初始化”: 从“double”到“float”截断
+d:\hl\cg\simulation\mpm\mpm\Util.h(14): warning C4244: “=”: 从“double”转换到“float”，可能丢失数据
+d:\hl\cg\simulation\mpm\mpm\Util.h(17): warning C4244: “=”: 从“double”转换到“float”，可能丢失数据
+d:\hl\cg\simulation\mpm\mpm\Util.h(27): warning C4244: “=”: 从“double”转换到“float”，可能丢失数据
+d:\hl\cg\simulation\mpm\mpm\MPM_Simulator.h(11): warning C4305: “参数”: 从“double”到“float”截断
+  Object.cpp
+d:\hl\cg\simulation\mpm\mpm\SimConstant.h(15): warning C4305: “初始化”: 从“double”到“float”截断
+d:\hl\cg\simulation\mpm\mpm\SimConstant.h(17): warning C4244: “初始化”: 从“double”转换到“int”，可能丢失数据
+d:\hl\cg\simulation\mpm\mpm\SimConstant.h(18): warning C4305: “初始化”: 从“double”到“float”截断
+d:\hl\cg\simulation\mpm\mpm\SimConstant.h(20): warning C4305: “初始化”: 从“double”到“float”截断
+d:\hl\cg\simulation\mpm\mpm\SimConstant.h(23): warning C4305: “初始化”: 从“double”到“float”截断
+d:\hl\cg\simulation\mpm\mpm\SimConstant.h(25): warning C4305: “初始化”: 从“double”到“float”截断
+d:\hl\cg\simulation\mpm\mpm\SimConstant.h(28): warning C4305: “参数”: 从“double”到“const float”截断
+d:\hl\cg\simulation\mpm\mpm\SimConstant.h(31): warning C4305: “初始化”: 从“double”到“float”截断
+d:\hl\cg\simulation\mpm\mpm\SimConstant.h(32): warning C4305: “初始化”: 从“double”到“float”截断
+d:\hl\cg\simulation\mpm\mpm\Util.h(9): warning C4305: “初始化”: 从“double”到“float”截断
+d:\hl\cg\simulation\mpm\mpm\Util.h(14): warning C4244: “=”: 从“double”转换到“float”，可能丢失数据
+d:\hl\cg\simulation\mpm\mpm\Util.h(17): warning C4244: “=”: 从“double”转换到“float”，可能丢失数据
+d:\hl\cg\simulation\mpm\mpm\Util.h(27): warning C4244: “=”: 从“double”转换到“float”，可能丢失数据
+Object.cpp(21): warning C4244: “初始化”: 从“float”转换到“int”，可能丢失数据
+  Shader.cpp
+Shader.cpp(49): warning C4101: “success”: 未引用的局部变量
+  SimConstant.h
+SimConstant.h(15): warning C4305: “初始化”: 从“double”到“float”截断
+SimConstant.h(17): warning C4244: “初始化”: 从“double”转换到“int”，可能丢失数据
+SimConstant.h(18): warning C4305: “初始化”: 从“double”到“float”截断
+SimConstant.h(20): warning C4305: “初始化”: 从“double”到“float”截断
+SimConstant.h(23): warning C4305: “初始化”: 从“double”到“float”截断
+SimConstant.h(25): warning C4305: “初始化”: 从“double”到“float”截断
+SimConstant.h(28): warning C4305: “参数”: 从“double”到“const float”截断
+SimConstant.h(31): warning C4305: “初始化”: 从“double”到“float”截断
+SimConstant.h(32): warning C4305: “初始化”: 从“double”到“float”截断
+  Util.cpp
+d:\hl\cg\simulation\mpm\mpm\SimConstant.h(15): warning C4305: “初始化”: 从“double”到“float”截断
+d:\hl\cg\simulation\mpm\mpm\SimConstant.h(17): warning C4244: “初始化”: 从“double”转换到“int”，可能丢失数据
+d:\hl\cg\simulation\mpm\mpm\SimConstant.h(18): warning C4305: “初始化”: 从“double”到“float”截断
+d:\hl\cg\simulation\mpm\mpm\SimConstant.h(20): warning C4305: “初始化”: 从“double”到“float”截断
+d:\hl\cg\simulation\mpm\mpm\SimConstant.h(23): warning C4305: “初始化”: 从“double”到“float”截断
+d:\hl\cg\simulation\mpm\mpm\SimConstant.h(25): warning C4305: “初始化”: 从“double”到“float”截断
+d:\hl\cg\simulation\mpm\mpm\SimConstant.h(28): warning C4305: “参数”: 从“double”到“const float”截断
+d:\hl\cg\simulation\mpm\mpm\SimConstant.h(31): warning C4305: “初始化”: 从“double”到“float”截断
+d:\hl\cg\simulation\mpm\mpm\SimConstant.h(32): warning C4305: “初始化”: 从“double”到“float”截断
+d:\hl\cg\simulation\mpm\mpm\Util.h(9): warning C4305: “初始化”: 从“double”到“float”截断
+d:\hl\cg\simulation\mpm\mpm\Util.h(14): warning C4244: “=”: 从“double”转换到“float”，可能丢失数据
+d:\hl\cg\simulation\mpm\mpm\Util.h(17): warning C4244: “=”: 从“double”转换到“float”，可能丢失数据
+d:\hl\cg\simulation\mpm\mpm\Util.h(27): warning C4244: “=”: 从“double”转换到“float”，可能丢失数据
+Util.cpp(10): warning C4244: “return”: 从“double”转换到“float”，可能丢失数据
+  Vector2f.cpp
+Vector2f.cpp(59): warning C4244: “return”: 从“double”转换到“const float”，可能丢失数据
+LINK : warning LNK4098: 默认库“MSVCRTD”与其他库的使用冲突；请使用 /NODEFAULTLIB:library
+  正在生成代码
+  All 637 functions were compiled because no usable IPDB/IOBJ from previous compilation was found.
+  已完成代码的生成
+glfw3.lib(context.obj) : warning LNK4099: 未找到 PDB“glfw.pdb”(使用“glfw3.lib(context.obj)”或在“D:\HL\CG\Simulation\MPM\Release\glfw.pdb”中寻找)；正在链接对象，如同没有调试信息一样
+glfw3.lib(init.obj) : warning LNK4099: 未找到 PDB“glfw.pdb”(使用“glfw3.lib(init.obj)”或在“D:\HL\CG\Simulation\MPM\Release\glfw.pdb”中寻找)；正在链接对象，如同没有调试信息一样
+glfw3.lib(input.obj) : warning LNK4099: 未找到 PDB“glfw.pdb”(使用“glfw3.lib(input.obj)”或在“D:\HL\CG\Simulation\MPM\Release\glfw.pdb”中寻找)；正在链接对象，如同没有调试信息一样
+glfw3.lib(monitor.obj) : warning LNK4099: 未找到 PDB“glfw.pdb”(使用“glfw3.lib(monitor.obj)”或在“D:\HL\CG\Simulation\MPM\Release\glfw.pdb”中寻找)；正在链接对象，如同没有调试信息一样
+glfw3.lib(vulkan.obj) : warning LNK4099: 未找到 PDB“glfw.pdb”(使用“glfw3.lib(vulkan.obj)”或在“D:\HL\CG\Simulation\MPM\Release\glfw.pdb”中寻找)；正在链接对象，如同没有调试信息一样
+glfw3.lib(window.obj) : warning LNK4099: 未找到 PDB“glfw.pdb”(使用“glfw3.lib(window.obj)”或在“D:\HL\CG\Simulation\MPM\Release\glfw.pdb”中寻找)；正在链接对象，如同没有调试信息一样
+glfw3.lib(win32_init.obj) : warning LNK4099: 未找到 PDB“glfw.pdb”(使用“glfw3.lib(win32_init.obj)”或在“D:\HL\CG\Simulation\MPM\Release\glfw.pdb”中寻找)；正在链接对象，如同没有调试信息一样
+glfw3.lib(win32_joystick.obj) : warning LNK4099: 未找到 PDB“glfw.pdb”(使用“glfw3.lib(win32_joystick.obj)”或在“D:\HL\CG\Simulation\MPM\Release\glfw.pdb”中寻找)；正在链接对象，如同没有调试信息一样
+glfw3.lib(win32_monitor.obj) : warning LNK4099: 未找到 PDB“glfw.pdb”(使用“glfw3.lib(win32_monitor.obj)”或在“D:\HL\CG\Simulation\MPM\Release\glfw.pdb”中寻找)；正在链接对象，如同没有调试信息一样
+glfw3.lib(win32_time.obj) : warning LNK4099: 未找到 PDB“glfw.pdb”(使用“glfw3.lib(win32_time.obj)”或在“D:\HL\CG\Simulation\MPM\Release\glfw.pdb”中寻找)；正在链接对象，如同没有调试信息一样
+glfw3.lib(win32_tls.obj) : warning LNK4099: 未找到 PDB“glfw.pdb”(使用“glfw3.lib(win32_tls.obj)”或在“D:\HL\CG\Simulation\MPM\Release\glfw.pdb”中寻找)；正在链接对象，如同没有调试信息一样
+glfw3.lib(win32_window.obj) : warning LNK4099: 未找到 PDB“glfw.pdb”(使用“glfw3.lib(win32_window.obj)”或在“D:\HL\CG\Simulation\MPM\Release\glfw.pdb”中寻找)；正在链接对象，如同没有调试信息一样
+glfw3.lib(wgl_context.obj) : warning LNK4099: 未找到 PDB“glfw.pdb”(使用“glfw3.lib(wgl_context.obj)”或在“D:\HL\CG\Simulation\MPM\Release\glfw.pdb”中寻找)；正在链接对象，如同没有调试信息一样
+glfw3.lib(egl_context.obj) : warning LNK4099: 未找到 PDB“glfw.pdb”(使用“glfw3.lib(egl_context.obj)”或在“D:\HL\CG\Simulation\MPM\Release\glfw.pdb”中寻找)；正在链接对象，如同没有调试信息一样
+  MPM.vcxproj -> D:\HL\CG\Simulation\MPM\Release\MPM.exe

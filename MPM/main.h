@@ -63,7 +63,6 @@ void makeSnowball(std::vector<LargrangianParticle> &particles, Vector2f origin, 
 
 	for (int i = 0; i < particle_number; ++i) {
 		float theta = UniformRandom(0, 2 * PI);
-
 		//Äæ±ä»»Ëã·¨Ñ¡Ôñ°ë¾¶
 		float temp_Px = UniformRandom(0, 1.0);//Px is the accumulated propability
 		float r = sqrt(radius * radius * temp_Px);//r = sqrt(Px * R * R);

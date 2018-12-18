@@ -13,6 +13,9 @@ int main() {
 
 	//std::shared_ptr<Object> snowball = makeSnowball(Vector2f(0.205, 0.795), 0.1, Vector2f(20.0, -5.0));
 	std::vector<LargrangianParticle> particles;
+	//makeSnowball(particles, Vector2f(0.15, 0.85), 0.1, Vector2f(20.0, -10.0));
+
+	/*--------------*/
 	makeSnowball(particles, Vector2f(0.205, 0.65), 0.1, Vector2f(20.0, 0.0));
 	makeSnowball(particles, Vector2f(0.795, 0.50), 0.1, Vector2f(-20.0, 0.0));
 	

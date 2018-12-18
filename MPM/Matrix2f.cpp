@@ -278,7 +278,8 @@ const Matrix2f Matrix2f::operator*(const Matrix2f &rhs) const {
 	Matrix2f result = Matrix2f(*this);
 	for (int i = 0; i < 2; ++i) {
 		for (int j = 0; j < 2; ++j) {
-			result.data[i][j] = data[i][0] * rhs[0][j] + data[i][1] * rhs[1][j];
+			//ÁÐÖ÷Ðò£¬result_i,j = l_0,j * r_i,0 + l_1,j * r_i,1
+			result.data[i][j] = data[0][j] * rhs[i][0] + data[1][j] * rhs[i][1];
 		}
 	}
 	return result;

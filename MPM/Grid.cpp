@@ -20,7 +20,7 @@ Grid::Grid(Vector2f _size, float _interval, std::shared_ptr<std::vector<Largrang
 		int node_x = x_p[0] / interval, node_y = x_p[1] / interval;
 
 		for (int temp_node_y = node_y - 1, index = 0; temp_node_y <= node_y + 2; ++temp_node_y) {
-			for (int temp_node_x = node_x - 1; temp_node_x <= node_x + 2; ++temp_node_x, ++index) {
+			for (int temp_node_x = node_x - 1;temp_node_x <= node_x + 2; ++temp_node_x, ++index) {
 				currentParticle.density += EulerGrid[temp_node_y * x_num + temp_node_x].mass * currentParticle.weight[index] / cell_volume;
 			}
 		}
@@ -68,7 +68,7 @@ void Grid::PtoG() {
 		for (int temp_node_y = node_y - 1, index = 0; temp_node_y <= node_y + 2; ++temp_node_y) {
 			if (temp_node_y < 0 || temp_node_y > y_num) continue;
 			
-			float yp_yi = x_p[1] / interval - temp_node_y;
+			float yp_yi = x_p[1] / interval - temp_node_y;// 1/h(yp - yi)
 			float weight_y = cubic_B_Spline(yp_yi);//N (1/h(yp - yi))
 
 			float weight_gradient0_y = weight_y,   //N (1/h(yp - yi))
@@ -80,6 +80,8 @@ void Grid::PtoG() {
 				int node_index = temp_node_y * x_num + temp_node_x;
 				float xp_xi = x_p[0] / interval - temp_node_x;
 				
+				//printf("xp - xi = %f, yp - yi = %f\n", xp_xi, yp_yi);
+
 				float weight_x = cubic_B_Spline(xp_xi);//N (1/h(xp - xi))
 
 				float weight_gradient0_x = cubic_B_Spline_grad(xp_xi),//N'(1/h(xp - xi))

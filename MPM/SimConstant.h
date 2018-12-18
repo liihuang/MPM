@@ -19,9 +19,9 @@ const float Particle_Diameter = 0.0025;
 const float Density = 100;
 const float PI = 3.1415926;
 const float WIN_METER_X = 1, WIN_METER_Y = 1;
-const float YOUNGS_MODULUS = 1.5e5,		//Young's modulus (springiness) (1.4e5)
+const float YOUNGS_MODULUS = 4.8e4,		//Young's modulus (springiness) (1.4e5)
 			POISSONS_RATIO = 0.2;
-const float Hardening = 5;
+const float Hardening = 10;
 const float FLIP_PERCENT = 0.95;
 const float BSPLINE_RADIUS = 2;
 
@@ -30,6 +30,6 @@ const Vector2f Gravity = Vector2f(0, -9.8);
 const float LAMBDA = YOUNGS_MODULUS * POISSONS_RATIO / ((1 + POISSONS_RATIO)*(1 - 2 * POISSONS_RATIO)),
 			MU = YOUNGS_MODULUS / (2 + 2 * POISSONS_RATIO);
 const float theta_c = 2.5e-2;//critical compression
-const float theta_s = 7.5e-3;//critical stretch
+const float theta_s = 5.0e-3;//critical stretch
 
 #endif // !SIMCONSTANT_H

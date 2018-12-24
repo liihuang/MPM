@@ -3,36 +3,24 @@
 int main() {
 	//Create main window
 	initialGLFW();
-	GLFWwindow* main_window = initialWindow(WinWidth, WinHeight, "MPM");
+	GLFWwindow* main_window = initialWindow(WIN_WIDTH, WIN_HEIGHT, "MPM");
 	initialGLAD();//GLAD must be initialized after creating window
-	glViewport(0, 0, WinWidth, WinHeight);
+	glViewport(0, 0, WIN_WIDTH, WIN_HEIGHT);
 
 	Shader shader("Shader/vertexShader.vs", "Shader/fragmentShader.fs");
 	shader.use();
 	int position_loc = glGetAttribLocation(shader.ID, "aPos");
-
-	//std::shared_ptr<Object> snowball = makeSnowball(Vector2f(0.205, 0.795), 0.1, Vector2f(20.0, -5.0));
-	std::vector<LargrangianParticle> particles;
-	//makeSnowball(particles, Vector2f(0.15, 0.85), 0.1, Vector2f(20.0, -10.0));
-
-	/*--------------*/
-	makeSnowball(particles, Vector2f(0.205, 0.65), 0.1, Vector2f(20.0, 0.0));
-	makeSnowball(particles, Vector2f(0.795, 0.50), 0.1, Vector2f(-20.0, 0.0));
+	int color_loc = glGetAttribLocation(shader.ID, "aColor");
 	
-	/*--------------*/
-	/*makeSnowball(particles, Vector2f(0.5, 0.16), 0.15, Vector2f(0.0, 0.0));
-	makeSnowball(particles, Vector2f(0.5, 0.4), 0.1, Vector2f(0.0, 0.0));
-	makeSnowball(particles, Vector2f(0.5, 0.57), 0.07, Vector2f(0.0, 0.0));
-	makeSnowball(particles, Vector2f(0.795, 0.5), 0.08, Vector2f(-20.0, -5.0));*/
+	Scene scene;
+	scene.addSphere(Vector2f(0.1, 0.65), 0.1, Vector2f(40.0, 0.0), 100.0);
+	scene.addSphere(Vector2f(0.9, 0.50), 0.1, Vector2f(-40.0, 0.0), 100.0);
+	//scene.addRectangle(Vector2f(0.25, 0.05), Vector2f(0.75, 0.4));
+	MPM_Simulator simulator(scene, TIMESTEP);
 
-
-	int particleNum = particles.size();
-	std::shared_ptr<Object> scene(std::make_shared<Object>(std::make_shared<std::vector<LargrangianParticle>>(particles)));
-	MPM_Simulator simulator(scene);
-	
-	std::vector<float> vertices(particleNum * 2);
-	simulator.createVAO(vertices);
-	//auto vertices = snowball->createVAO();
+	int particleNum = scene.getParticleNum();
+	std::vector<float> vertices(particleNum * 4);
+	//simulator.createVAO(vertices);
 	
 	unsigned int VAO;
 	glGenVertexArrays(1, &VAO);
@@ -41,14 +29,19 @@ int main() {
 	unsigned int VBO;
 	glGenBuffers(1, &VBO);
 	glBindBuffer(GL_ARRAY_BUFFER, VBO);
-	glBufferData(GL_ARRAY_BUFFER, particleNum * sizeof(GL_FLOAT) * 2, &(vertices[0]), GL_STREAM_DRAW);
+	//glBufferData(GL_ARRAY_BUFFER, particleNum * sizeof(GL_FLOAT) * 2, &(vertices[0]), GL_STREAM_DRAW);
 
 	//glVertexAttribPointer(0, 2, GL_FLOAT, GL_FALSE, 2 * sizeof(GL_FLOAT), (void*)0);
-	glVertexAttribPointer(position_loc, 2, GL_FLOAT, GL_FALSE, 0, (void*)0);
+	glVertexAttribPointer(position_loc, 2, GL_FLOAT, GL_FALSE, 4 * sizeof(GL_FLOAT), (void*)0);
 	glEnableVertexAttribArray(position_loc);
-	
+	glVertexAttribPointer(color_loc, 2, GL_FLOAT, GL_FALSE, 4 * sizeof(GL_FLOAT), (void*)(2 * sizeof(GL_FLOAT)));
+	glEnableVertexAttribArray(color_loc);
+
+	glBindBuffer(GL_ARRAY_BUFFER, 0);
+	glBindVertexArray(0);
+
 	glm::mat4 view;
-	view = glm::translate(view, glm::vec3(-0.5f, 0.0f, 0.0f));
+	view = glm::translate(view, glm::vec3(-1.0f, -1.0f, 0.0f));
 
 	/*-----time-----*/
 	auto previous = system_clock::now(), current = system_clock::now();
@@ -56,25 +49,30 @@ int main() {
 
 	frame_count = 0;
 
-	glClearColor(0.05f, 0.1f, 0.1f, 1.0f);
+	glClearColor(0.0f, 0.0f, 0.0f, 1.0f);
+	
 	//Render Loop
 	while (!glfwWindowShouldClose(main_window))
 	{
-		glClear(GL_COLOR_BUFFER_BIT);
-		
-		glEnable(GL_PROGRAM_POINT_SIZE);
-		
+		// update particles
 		shader.setMat4("transform", view);
 
 		previous = system_clock::now();
 
-		simulator.update();
+		simulator.advance();
 		simulator.createVAO(vertices);
 
-		//glBindVertexArray(VAO);
-		glBufferData(GL_ARRAY_BUFFER, particleNum * sizeof(GL_FLOAT) * 2, &(vertices[0]), GL_STREAM_DRAW);
+		glClear(GL_COLOR_BUFFER_BIT);
+		glEnable(GL_POINT_SIZE);
+
+		glBindVertexArray(VAO);
+		glBindBuffer(GL_ARRAY_BUFFER, VBO);
+		glBufferData(GL_ARRAY_BUFFER, particleNum * sizeof(GL_FLOAT) * 4, &(vertices[0]), GL_STREAM_DRAW);// GL_STREAM_DRAW: 数据每次绘制时都会改变
 
 		glDrawArrays(GL_POINTS, 0, particleNum);
+
+		glBindBuffer(GL_ARRAY_BUFFER, 0);
+		glBindVertexArray(0);
 
 		current = system_clock::now();
 
@@ -87,7 +85,6 @@ int main() {
 		glfwPollEvents();
 	}
 	
-
 	glfwTerminate();
 	return 0;
 }

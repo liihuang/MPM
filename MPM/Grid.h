@@ -3,16 +3,16 @@
 
 #include <memory>
 #include <vector>
-#include "EulerianNode.h"
-#include "LargrangianParticle.h"
+#include "Particle.h"
+#include "Scene.h"
 #include "Util.h"
 #include "SimConstant.h"
 
 class Grid {
-	std::vector<EulerianNode> EulerGrid;
-	std::shared_ptr<std::vector<LargrangianParticle>> obj;
+	std::vector<EulerianNode> eulerianNodes;
+	
 	Vector2f size;//width and height;
-	float interval;
+	float interval_x, interval_y;
 	int x_num, y_num;
 #if ENABLE_IMPLICIT
 	std::vector<Matrix2f> Hessian;//(d^2 * e^n)/(dx_i * dx_j), is a symmetric matirx
@@ -20,14 +20,15 @@ class Grid {
 #endif
 public:
 	Grid() = default;
-	Grid(Vector2f _size, float _interval, std::shared_ptr<std::vector<LargrangianParticle>> _obj);
+	Grid(float _interval_x, float _interval_y, Vector2f _size = Vector2f(1.0f, 1.0f));
+	Grid(int resolution_x, int resolution_y, Vector2f _size = Vector2f(1.0f, 1.0f));
 
-	void PtoG();
+	void PtoG(Scene &scene);
 	void updateGridVelocity();
 	void explicitVelocity() {
-		for (int i = 0, length = EulerGrid.size(); i < length; ++i) {
-			EulerGrid[i].velocity /= EulerGrid[i].mass;
-			EulerGrid[i].velocity += TimeStep * (Gravity + EulerGrid[i].explicitForce / EulerGrid[i].mass);
+		for (int i = 0, length = eulerianNodes.size(); i < length; ++i) {
+			eulerianNodes[i].velocity /= eulerianNodes[i].mass;
+			eulerianNodes[i].velocity += TIMESTEP * (GRAVITY + eulerianNodes[i].explicitForce / eulerianNodes[i].mass);
 		}
 	}
 #if ENABLE_IMPLICIT
@@ -40,8 +41,9 @@ public:
 
 	void setHessian(const int &i, const int &j, const Matrix2f &m);
 
-	float getInterval() { return interval; }
-	EulerianNode& getNode(int index) { return EulerGrid[index]; }
+	float getIntervalX() { return interval_x; }
+	float getIntervalY() { return interval_y; }
+	EulerianNode& getNode(int index) { return eulerianNodes[index]; }
 	int getX_num() { return x_num; }
 	int getY_num() { return y_num; }
 };

@@ -12,7 +12,7 @@
 #include <glm/gtc/matrix_transform.hpp>
 #include <glm/gtc/type_ptr.hpp>
 #include "Shader.h"
-#include "Object.h"
+#include "Scene.h"
 #include "Util.h"
 #include "SimConstant.h"
 #include "MPM_Simulator.h"
@@ -52,24 +52,5 @@ int initialGLAD() {
 	}
 	return 1;
 }
-
-void makeSnowball(std::vector<LargrangianParticle> &particles, Vector2f origin, float radius, Vector2f velocity){
-	
-	float particle_area = Particle_Diameter * Particle_Diameter;
-	float particle_mass = particle_area * Density;
-	int total_particle_number = PI * radius * radius / particle_area;
-
-	srand((unsigned)time(NULL));
-
-	int current_particle_number = 0;
-	while (current_particle_number < total_particle_number) {
-		float x = UniformRandom(-radius, radius);
-		float y = UniformRandom(-radius, radius);
-		if (sqrt(x * x + y * y) >= radius) continue;
-		particles.push_back(LargrangianParticle(particle_mass, origin + Vector2f(x, y), LAMBDA, MU, velocity));
-		current_particle_number++;
-	}
-}
-
 
 #endif

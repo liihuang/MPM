@@ -2,15 +2,19 @@
 #define MPM_SIMULATOR_H
 
 #include "Grid.h"
-#include "Object.h"
+#include "Scene.h"
 
 class MPM_Simulator {
-	std::shared_ptr<Grid> grid;
-	std::shared_ptr<Object> object;
+	Grid grid;
+	Scene scene;
+	float delta_t;
 public:
-	MPM_Simulator(std::shared_ptr<Object> _object) : object(_object), grid(new Grid(Vector2f(WIN_METER_X, WIN_METER_Y), 0.005, _object->getMP())) {	}
+	MPM_Simulator() = default;
+	MPM_Simulator(Scene _scene, float _delta_t) : scene(_scene), delta_t(_delta_t), grid((float)0.005, (float)0.005, Vector2f(WIN_METER_X, WIN_METER_Y)) { init(); }
 
-	void update();
+	void init();
+	void setTimeStep(float _delta_t) { delta_t = _delta_t; }
+	void advance();
 	void createVAO(std::vector<float> &v);
 };
 

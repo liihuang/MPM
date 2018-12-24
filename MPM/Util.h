@@ -6,8 +6,6 @@
 #include "Vector2f.h"
 #include "SimConstant.h"
 
-const float BSPLINE_EPSILON = 1e-4;
-
 inline float cubic_B_Spline(float x) {
 	float abs_x = fabs(x), result;
 	if (abs_x < 1) {

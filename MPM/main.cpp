@@ -13,7 +13,7 @@ int main() {
 	int color_loc = glGetAttribLocation(shader.ID, "aColor");
 	
 	Scene scene;
-	scene.addSphere(Vector2f(0.1, 0.65), 0.1, Vector2f(40.0, 0.0), 100.0);
+	scene.addSphere(Vector2f(0.15, 0.65), 0.1, Vector2f(40.0, 0.0), 100.0);
 	scene.addSphere(Vector2f(0.9, 0.50), 0.1, Vector2f(-40.0, 0.0), 100.0);
 	//scene.addRectangle(Vector2f(0.25, 0.05), Vector2f(0.75, 0.4));
 	MPM_Simulator simulator(scene, TIMESTEP);

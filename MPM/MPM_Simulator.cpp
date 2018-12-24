@@ -30,12 +30,12 @@ void MPM_Simulator::createVAO(std::vector<float> &v) {
 }
 
 void MPM_Simulator::advance() {
-	grid.PtoG(scene);//700ms->562ms
-	grid.updateGridVelocity();//9ms
-	grid.collision();//9ms
+	grid.PtoG(scene);
+	grid.updateGridVelocity();
+	grid.collision();
 
-	scene.GtoP(grid);//550ms->170ms
-	scene.updateF();//250ms->200ms
-	scene.collision();//10ms
-	scene.advection();//5ms
+	scene.GtoP(grid);
+	scene.updateF();
+	scene.collision();
+	scene.advection();
 }
